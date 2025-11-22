@@ -40,6 +40,15 @@
                             <li><a class="dropdown-item" href="?page=listar-animal">Listar</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Adotantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="?page=cadastrar-adotante">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="?page=listar-adotante">Listar</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -77,6 +86,20 @@
                             break;
                         case "editar-animal": 
                             include("editar-animal.php");
+                            break;
+
+                        
+                        case "cadastrar-adotante": 
+                            include("cadastrar-adotante.php"); 
+                            break;
+                        case "listar-adotante": 
+                            include("listar-adotante.php"); 
+                            break;
+                        case "salvar-adotante": 
+                            include("salvar-adotante.php"); 
+                            break;
+                        case "editar-adotante": 
+                            include("editar-adotante.php"); 
                             break;
 
                         default:

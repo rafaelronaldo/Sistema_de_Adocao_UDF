@@ -46,6 +46,15 @@ CREATE TABLE IF NOT EXISTS `animais` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `adotantes` (
+  `id_adotantes` INT NOT NULL AUTO_INCREMENT,
+  `nome_adotante` VARCHAR(100) NOT NULL,
+  `cpf_adotante` VARCHAR(14) NOT NULL,
+  `telefone_adotante` VARCHAR(20) NOT NULL,
+  `endereco_adotante` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id_adotantes`)
+) ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

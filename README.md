@@ -17,6 +17,9 @@ O objetivo principal do trabalho foi implementar **dois CRUDs** (Create, Read, U
 * **Listagem Inteligente:** Utiliza `INNER JOIN` no SQL para exibir o **Nome da Raça** na tabela de animais, ao invés de apenas mostrar o código numérico.
 * **Editar e Excluir:** Gerenciamento completo dos dados dos pets.
 
+### 3. Gerenciamento de Adotantes (Tutores)
+* **Cadastro de Pessoas:** Registro de interessados com Nome, CPF, Telefone e Endereço.
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
