@@ -49,6 +49,9 @@
                             <li><a class="dropdown-item" href="?page=listar-adotante">Listar</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=adotar-animal">Adotar Animal</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -100,6 +103,13 @@
                             break;
                         case "editar-adotante": 
                             include("editar-adotante.php"); 
+                            break;
+
+                        case "adotar-animal": 
+                            include("adotar-animal.php"); 
+                            break;
+                        case "salvar-adocao": 
+                            include("salvar-adocao.php"); 
                             break;
 
                         default:

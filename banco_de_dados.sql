@@ -55,6 +55,29 @@ CREATE TABLE IF NOT EXISTS `adotantes` (
   PRIMARY KEY (`id_adotantes`)
 ) ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `adocoes` (
+  `id_adocoes` INT NOT NULL AUTO_INCREMENT,
+  `data_adocao` DATE NOT NULL,
+  `animais_id_animais` INT NOT NULL,
+  `adotantes_id_adotantes` INT NOT NULL,
+  PRIMARY KEY (`id_adocoes`),
+  
+ 
+  INDEX `fk_adocoes_animais_idx` (`animais_id_animais` ASC),
+  CONSTRAINT `fk_adocoes_animais`
+    FOREIGN KEY (`animais_id_animais`)
+    REFERENCES `animais` (`id_animais`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+    
+  
+  INDEX `fk_adocoes_adotantes_idx` (`adotantes_id_adotantes` ASC),
+  CONSTRAINT `fk_adocoes_adotantes`
+    FOREIGN KEY (`adotantes_id_adotantes`)
+    REFERENCES `adotantes` (`id_adotantes`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
