@@ -1,4 +1,4 @@
-# 3. Descrição na Linguagem Algorítmica (Processo de Cadastro)
+# Descrição na Linguagem Algorítmica (Processo de Cadastro)
 
 O algoritmo a seguir descreve o processo de criação de um novo registro de Adotante (o 'C' do CRUD), garantindo a coleta dos dados do formulário, a conexão ao banco de dados, a execução da operação de INSERT e a notificação de sucesso ou falha.
 
