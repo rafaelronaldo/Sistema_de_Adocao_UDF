@@ -1,35 +1,55 @@
-# 🐶 Sistema de Adoção de Pets (CRUD com Relacionamento)
+# Projeto Final – [Seu Nome Completo] _ [Nome da Disciplina]
 
-Sistema web desenvolvido para o gerenciamento de adoções de animais em uma ONG fictícia. Este projeto foi criado como atividade avaliativa para a disciplina de **Programação Web** no **Centro Universitário Do Distrito Federal - UDF**.
+## 🐾 Sistema de Adoção de Animais (AdotePET)
 
-O objetivo principal do trabalho foi implementar **dois CRUDs** (Create, Read, Update, Delete) que possuam um **relacionamento de banco de dados (1:N)**.
+Este projeto é um sistema web simples desenvolvido em PHP com banco de dados MySQL para gerenciar o processo de adoção de animais. Ele implementa a funcionalidade completa de **CRUD (Create, Read, Update, Delete)** para Raças, Animais e Adotantes, e adiciona uma lógica de **transação de adoção** que registra o evento e atualiza o status do animal.
 
-## 📋 Funcionalidades
+### Entidades Principais:
 
-### 1. Gerenciamento de Raças (Tabela Pai)
-* **Cadastrar:** Permite registrar novas raças e portes.
-* **Listar:** Visualização de todas as raças cadastradas.
-* **Editar:** Atualização de nomes ou portes incorretos.
-* **Excluir:** Remoção de registros do banco.
-
-### 2. Gerenciamento de Animais (Tabela Filha)
-* **Cadastrar com Relacionamento:** Ao cadastrar um animal, o sistema busca as raças no banco e cria um `<select>` dinâmico. O usuário não digita o ID, ele escolhe o nome da raça.
-* **Listagem Inteligente:** Utiliza `INNER JOIN` no SQL para exibir o **Nome da Raça** na tabela de animais, ao invés de apenas mostrar o código numérico.
-* **Editar e Excluir:** Gerenciamento completo dos dados dos pets.
-
-### 3. Gerenciamento de Adotantes (Tutores)
-* **Cadastro de Pessoas:** Registro de interessados com Nome, CPF, Telefone e Endereço.
+1.  **Raças**: Cadastro e gerenciamento de tipos de raças e portes.
+2.  **Adotantes**: Cadastro de pessoas interessadas em adotar (dados pessoais e contato).
+3.  **Animais**: Cadastro de animais disponíveis, incluindo seu status (Disponível/Adotado).
+4.  **Adoções**: Tabela de relacionamento que registra a data e qual animal foi para qual adotante.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 🛠️ Instruções de Execução do Projeto
 
-* **PHP 8** (Estruturado/Procedural)
-* **MySQL / MariaDB** (Banco de Dados Relacional)
-* **Bootstrap 5** (Framework CSS para estilização responsiva)
-* **HTML5 / CSS3**
-* **XAMPP** (Servidor local Apache + MySQL)
+Para rodar este projeto em ambiente local, siga os passos abaixo:
+
+### Pré-requisitos:
+
+* Servidor web local (Ex: **XAMPP**, WAMP ou Laragon).
+* PHP (versão 7.x ou superior).
+* MySQL/MariaDB.
+
+### 1. Configuração do Banco de Dados
+
+1.  Inicie os serviços do **Apache** e **MySQL** no seu XAMPP/WAMP.
+2.  Acesse o **phpMyAdmin** (`http://localhost/phpmyadmin`).
+3.  Crie um novo banco de dados com o nome exato: `banco_de_dados`.
+4.  No banco de dados `banco_de_dados`, clique na aba SQL e execute o conteúdo completo do arquivo `banco_de_dados.sql` (disponível neste repositório) para criar todas as tabelas necessárias (`racas`, `animais`, `adotantes`, `adocoes`).
+
+### 2. Configuração do Código-Fonte
+
+1.  Baixe ou clone este repositório para a pasta de projetos do seu servidor web (Ex: `C:\xampp\htdocs`).
+2.  Certifique-se de que a pasta raiz do projeto está nomeada como `Sistema_de_Adocao_UDF` (ou o nome que você usou no XAMPP).
+3.  O arquivo `config.php` já está configurado para:
+    * `HOST`: `localhost`
+    * `USER`: `root`
+    * `PASS`: `` (vazio, padrão do XAMPP)
+    * `BASE`: `banco_de_dados`
+
+### 3. Acesso ao Sistema
+
+1.  Abra seu navegador.
+2.  Acesse o endereço: `http://localhost/Sistema_de_Adocao_UDF/index.php`
 
 ---
 
+## 📄 Documentação Complementar (Análise do CRUD)
+
+### Processo Analisado: Cadastro de Adotante
+
+O processo de **Cadastro de Adotantes** (aplicado no arquivo `cadastrar-adotante.php` para o formulário e `salvar-adotante.php` para a lógica) segue o ciclo Create (C) do CRUD, sendo essencial para registrar novos interessados no sistema.
 
